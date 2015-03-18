@@ -1,0 +1,30 @@
+ajasta -- simultaneous timers.
+
+ajasta can be used to time things. It keeps track of 26 separate ms-accuracy
+timers simultaneously, each of which can be started, stopped, restarted, and
+split at any time. You can also name the timers so you know which is which.
+
+ajasta works in the terminal and is intended to be very small yet functional.
+
+The timers are referred to by the alphabet a-z. Key commands:
+'a'-'z': start/stop the respective timer
+'A'-'Z': record a split time for the respective timer (print out and preserve
+         current value without stopping the timer)
+'!' followed by 'a'-'z': reset a timer (set its value to 0). Type another '!' to
+                         reset all the shown timers.
+'?' followed by 'a'-'z': (re)name a timer
+'.' stop all running timers
+':' take split time for all running timers
+' ' (space) start all shown timers
+'#': quit
+
+Timers are not shown until you have either started them once or named them.
+(Therefore, the screen is initially empty.)
+
+Files included:
+	ajasta.c      the source
+	Makefile      trivial makefile
+	ajasta.1      man page
+	README        this file
+
+['ajasta' is the singular imperative form of the Finnish verb for "to time".]

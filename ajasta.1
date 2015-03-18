@@ -1,0 +1,39 @@
+.TH ajasta
+.SH NAME
+ajasta -- simultaneous timers
+.SH SYNOPSIS
+.B "ajasta"
+.SH DESCRIPTION
+.PP
+ajasta can be used to time things. It keeps track of 26 separate ms-accuracy
+timers simultaneously, each of which can be started, stopped, restarted, and
+split at any time. You can also name the timers so you know which is which.
+.SH USAGE
+.PP
+.B "Keys:"
+.TP 8
+a-z:
+start/stop the respective timer
+.TP
+A-Z:
+record a split time for the respective timer (print out and preserve current value without stopping the timer)
+.TP
+!
+followed by a-z: reset a timer (set its value to 0). Type another '!' to reset all the shown timers.
+.TP
+?
+followed by a-z: (re)name a timer
+.TP
+\&.
+stop all running timers
+.TP
+:
+take split time for all running timers
+.TP
+  (space)
+start all shown timers
+.TP
+#
+quit
+.SH BUGS
+Bug reports and suggestions; see http://github.com/lotuskip/ajasta
